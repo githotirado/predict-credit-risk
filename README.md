@@ -19,7 +19,7 @@ Random Forest Classifier: (n_estimators = 10)
 RFC Training Score: 0.9898193760262726
 RFC Testing Score: 0.6112292641429179
 
-Initially, the Random Forest Classifier was getting a training score of 100% with testing score around 65% if I used a high number of n_estimators like 500 or 100.  That could mean the model was too complex and was overfitting the training data.  As this is assumed to be a hyperparameter for Random Forest, I reduced the number of n_estimators to 10 trees, and the training score was reduced to 98% with test score of 61%.  So I believe that even though Random Forest Classifier is a complex model, by reducing the number of trees used we could get a better training score and more realistic testing score.  61% testing score for RFC was still better than the 51% for logical regression.  
+Initially, the Random Forest Classifier was getting a training score of 100% with testing score around 65% if I used a high number of n_estimators like 500 or 100.  That meant the model was too complex and was overfitting the training data.  As this is assumed to be a hyperparameter for Random Forest, I reduced the number of n_estimators to 10 trees, and the training score was reduced to 98% with test score of 61%.  So I believe that even though Random Forest Classifier is a complex model, by reducing the number of trees used we could get a better training score and more realistic testing score.  61% testing score for RFC was still better than the 51% for logical regression.  But the difference between the train and test percentages for Random Forest might in fact mean the model is overfitting the training data making the results less trustworthy than the Logical Regression results which are at least returning relatively close percentages for train and test that make the outcome more trustworthy.
 
 # Comparison between predicted behavior of the models on scaled data and the actual results
 Logical Regression:
@@ -38,4 +38,4 @@ Random Forest Classifier: (n_estimators = 3)
 Scaled RFC Training Score: 0.9442528735632184
 Scaled RFC Testing Score: 0.5935772011909826
 
-Similar to the unscaled comparison, a high number of trees/estimators in the RFC seemed to overfit the training data.  But with fewer trees/estimators, the training score dropped down to 99% (trees=10) or even 94% (trees=3) and produced 59-61% training score which is better than the LR testing score of 50%.
+Similar to the unscaled comparison, a high number of trees/estimators in the RFC seemed to overfit the training data.  But with fewer trees/estimators, the training score dropped down to 99% (trees=10) or even 94% (trees=3) and produced 59-61% training score which is better than the LR testing score of 50%.  In this case I might trust the Random Forest classifier a bit more.
